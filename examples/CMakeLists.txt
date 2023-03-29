@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.13)
+add_subdirectory(.. build_lib)
+project(example)
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${CMAKE_PROJECT_NAME})
+add_executable(example)
+target_sources(example PRIVATE main.cpp)
+target_link_libraries(example PRIVATE argsParser)
+target_include_directories(example PRIVATE ../include)
