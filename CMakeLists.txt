@@ -3,6 +3,9 @@ project (argsParser)
 set(CMAKE_CXX_STANDARD 17)
 
 add_library(argsParser STATIC)
+enable_testing()
+
+add_subdirectory(tests)
 
 target_sources(argsParser PRIVATE
     include/argsParser.h
@@ -10,4 +13,3 @@ target_sources(argsParser PRIVATE
 )
 
 target_include_directories(argsParser PRIVATE include)
-
