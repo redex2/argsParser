@@ -12,6 +12,9 @@ class argsParser
 {
 public:
 	void addOpt(std::string longOpt = "", char shortOpt = 0, std::string description = "", bool argument = false, std::string argumentDescription = "value");
+	/*
+		use after addOpt
+	*/
 	short parse(int& argc, char** argv, std::string execOpt = "[OPTIONS]");
 	bool isOptSet(std::string opt);
 	bool isOptSet(char opt);
